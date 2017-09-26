@@ -34,6 +34,9 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    globals:
+        developper : "Olivier Fillol"
+        siteName: "Rezo Pouce"
 
 # Doctrine Configuration
 doctrine:

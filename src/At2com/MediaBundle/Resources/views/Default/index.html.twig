@@ -1,1 +1,37 @@
-Hello World!
+{# src/At2com/MediaBundle/Resources/views/Default/index.html.twig #}
+{% extends 'At2comMediaBundle::main_layout.html.twig' %}
+
+{% block header_title %}Les médias{% endblock %}
+
+{% block content_title %}Les médias{% endblock %}
+
+{% block content %}
+
+    {# Bloc d'insertion d'un média #}
+    <h2>Insérer un média</h2>
+    <input id="media2download" type="file" name="" value="">
+    <hr />
+
+    {# Block d'affichage des medias #}
+    <h2>Les médias disponibles</h2>
+    {% if media is defined %}
+        {% for media in medias %}
+            {{ media.title }}
+        {% endfor %}
+    {% else %}
+    <div class="alert alert-warning" role="alert">
+        Il n'y a pour l'instant aucun média.
+    </div>
+    {% endif %}
+
+{% endblock %}
+
+{% block stylesheets %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.4/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('bundles/at2commedia/js/app.js') }}">
+
+    </script>
+{% endblock %}
