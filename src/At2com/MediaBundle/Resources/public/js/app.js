@@ -1,3 +1,5 @@
 $(document).ready(function(){
-    $('#media2download').fileinput();
+    $('#media2download').fileinput({
+        language: "fr"
+    });
 });

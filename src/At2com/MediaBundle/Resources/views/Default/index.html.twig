@@ -8,21 +8,36 @@
 {% block content %}
 
     {# Bloc d'insertion d'un média #}
-    <h2>Insérer un média</h2>
-    <input id="media2download" type="file" name="" value="">
-    <hr />
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Insérer un média</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                        <input id="media2download" type="file" name="" value="">
+                </div>
+            </div>
+
+            <hr />
+        </div>
+    </div>
+
 
     {# Block d'affichage des medias #}
-    <h2>Les médias disponibles</h2>
-    {% if media is defined %}
-        {% for media in medias %}
-            {{ media.title }}
-        {% endfor %}
-    {% else %}
-    <div class="alert alert-warning" role="alert">
-        Il n'y a pour l'instant aucun média.
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Les médias disponibles</h2>
+            {% if media is defined %}
+                {% for media in medias %}
+                    {{ media.title }}
+                {% endfor %}
+            {% else %}
+            <div class="alert alert-warning" role="alert">
+                Il n'y a pour l'instant aucun média.
+            </div>
+            {% endif %}
+        </div>
     </div>
-    {% endif %}
 
 {% endblock %}
 

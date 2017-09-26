@@ -18,12 +18,14 @@
     </head>
     <body>
 
-        <h1>
-            {% block content_title %}{% endblock %}
-        </h1>
+        <div class="container">
 
-        <div>
+            <h1>
+                {% block content_title %}{% endblock %}
+            </h1>
+
             {% block content %}{% endblock %}
+
         </div>
 
         {# External JS #}
