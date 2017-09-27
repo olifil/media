@@ -1,0 +1,11 @@
+at2com_media_homepage:
+    path: /
+    defaults: { _controller: At2comMediaBundle:Default:index }
+    methods: GET
+
+at2com_media.upload:
+    path: /upload
+    defaults: { _controller: At2comMediaBundle:Default:upload }
+    methods: POST
+    options:
+        expose: true

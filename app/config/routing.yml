@@ -1,5 +1,5 @@
 at2com_media:
-    resource: "@At2comMediaBundle/Resources/config/routing.xml"
+    resource: "@At2comMediaBundle/Resources/config/routing.yml"
     prefix:   /
 
 # app/config/routing.yml
